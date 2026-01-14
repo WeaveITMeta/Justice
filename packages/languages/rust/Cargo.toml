@@ -1,0 +1,82 @@
+[package]
+name = "justice-identity-protection"
+version = "1.0.0"
+edition = "2021"
+authors = ["Justice Platform <platform@justice.gov>"]
+license = "MIT"
+description = "Government-mandated digital identity protection platform with Cardano blockchain integration"
+homepage = "https://github.com/justice-platform/identity-protection"
+repository = "https://github.com/justice-platform/identity-protection"
+documentation = "https://docs.justice.gov/identity-protection"
+keywords = ["identity", "protection", "blockchain", "cardano", "government", "takedown"]
+categories = ["cryptography", "web-programming", "api-bindings"]
+readme = "README.md"
+
+[lib]
+name = "justice_identity_protection"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+# Blockchain & Crypto
+cardano-serialization-lib = "11.4"
+pallas-crypto = "0.18"
+blake2 = "0.10"
+ed25519-dalek = "2.0"
+aes-gcm = "0.10"
+
+# Async & HTTP
+tokio = { version = "1.32", features = ["full"] }
+reqwest = { version = "0.11", features = ["json", "stream"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Image Processing
+image = "0.24"
+opencv = { version = "0.88", features = ["contrib"] }
+
+# Biometrics & AI
+candle-core = "0.3"
+candle-nn = "0.3"
+face-detection = "0.1"
+
+# Web Framework (for government dashboard)
+axum = "0.6"
+tower = "0.4"
+tower-http = { version = "0.4", features = ["cors", "fs"] }
+
+# Database & Storage
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "postgres", "chrono", "uuid"] }
+ipfs-api-backend-hyper = "0.6"
+
+# Utils
+uuid = { version = "1.0", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+anyhow = "1.0"
+thiserror = "1.0"
+log = "0.4"
+env_logger = "0.10"
+
+[dev-dependencies]
+tokio-test = "0.4"
+mockall = "0.11"
+tempfile = "3.0"
+
+[features]
+default = ["government-dashboard"]
+government-dashboard = ["axum", "tower", "tower-http"]
+mobile-sdk = []
+wasm-support = ["wasm-bindgen"]
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+wasm-bindgen = "0.2"
+js-sys = "0.3"
+web-sys = "0.3"
+
+[[bin]]
+name = "justice-dashboard"
+path = "src/bin/dashboard.rs"
+required-features = ["government-dashboard"]
+
+[[bin]]
+name = "justice-cli"
+path = "src/bin/cli.rs"

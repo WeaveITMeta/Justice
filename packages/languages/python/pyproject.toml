@@ -1,0 +1,76 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "justice-identity-protection"
+version = "1.0.0"
+description = "Government-mandated digital identity protection platform with Cardano blockchain integration"
+authors = [{name = "Justice Platform", email = "platform@justice.gov"}]
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["identity", "protection", "blockchain", "cardano", "government", "takedown"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Legal Industry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "pycardano>=0.9.0",
+    "opencv-python>=4.8.0",
+    "numpy>=1.24.0",
+    "cryptography>=41.0.0",
+    "aiohttp>=3.8.0",
+    "pydantic>=2.0.0",
+    "pillow>=10.0.0",
+    "face-recognition>=1.3.0",
+    "python-multipart>=0.0.6",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "mypy>=1.5.0",
+    "pre-commit>=3.0.0",
+]
+dashboard = [
+    "fastapi>=0.100.0",
+    "uvicorn>=0.23.0",
+    "streamlit>=1.25.0",
+    "plotly>=5.15.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/justice-platform/identity-protection"
+Repository = "https://github.com/justice-platform/identity-protection"
+Documentation = "https://docs.justice.gov/identity-protection"
+"Bug Tracker" = "https://github.com/justice-platform/identity-protection/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/justice"]
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true

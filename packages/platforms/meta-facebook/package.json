@@ -1,0 +1,30 @@
+{
+  "name": "@justice/platform-meta-facebook",
+  "version": "1.0.0",
+  "description": "Meta/Facebook platform integration for Justice Identity Protection (Facebook, Instagram, WhatsApp, Threads)",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target node",
+    "dev": "bun run --hot src/index.ts",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@justice/identity-core": "^1.0.0",
+    "facebook-nodejs-business-sdk": "^18.0.3",
+    "instagram-basic-display-api": "^2.0.1",
+    "whatsapp-web.js": "^1.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.0",
+    "bun-types": "^1.0.0"
+  },
+  "keywords": ["facebook", "instagram", "whatsapp", "threads", "meta", "platform-integration"],
+  "author": "Justice Platform <platform@justice.gov>",
+  "license": "MIT",
+  "peerDependencies": {
+    "@justice/blockchain-cardano": "^1.0.0",
+    "@justice/blockchain-ethereum": "^1.0.0"
+  }
+}
