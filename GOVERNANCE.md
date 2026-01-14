@@ -39,12 +39,12 @@ All participants in the Justice System project:
 
 ### Core Team
 
-**Composition**: 7-11 members elected by community
-- 2-3 Technical leads
-- 2-3 Legal/policy experts
-- 2-3 Research/data scientists
-- 1-2 Advocacy/community organizers
-- 1-2 At-large members
+**Composition**: Members elected by community
+- Technical leads
+- Legal/policy experts
+- Research/data scientists
+- Advocacy/community organizers
+- At-large members
 
 **Term**: 2 years, staggered (half elected each year)
 
@@ -73,9 +73,9 @@ Five permanent working groups focused on specific areas:
 5. **Documentation**
 
 **Structure**: Each working group has:
-- 1 Core Team liaison
-- 1-2 Working group leads (elected by WG members)
-- 5-20 active members
+- Core Team liaison
+- Working group leads (elected by WG members)
+- Active members
 - Open participation
 
 **Responsibilities**:
@@ -384,13 +384,6 @@ This governance document can be amended by:
 4. Community vote (2/3 majority)
 
 ## Resources
-
-### Communication Channels
-- **GitHub Discussions**: General discussions, proposals
-- **GitHub Issues**: Bug reports, feature requests
-- **Discord**: Real-time collaboration (coming soon)
-- **Mailing List**: Announcements (coming soon)
-- **Monthly Meetings**: Public Core Team meetings
 
 ### Documentation
 - **CONTRIBUTING.md**: How to contribute
