@@ -1,0 +1,27 @@
+{
+  "name": "@justice/identity-contracts-ethereum",
+  "version": "1.0.0",
+  "description": "Ethereum smart contracts for Justice Identity Protection Platform",
+  "main": "dist/index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat deploy",
+    "verify": "hardhat verify"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.1",
+    "@openzeppelin/contracts-upgradeable": "^5.0.1",
+    "ethers": "^6.8.1"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "hardhat": "^2.19.2",
+    "hardhat-deploy": "^0.11.45",
+    "@typechain/hardhat": "^9.1.0"
+  },
+  "keywords": ["ethereum", "smart-contracts", "identity", "protection", "government"],
+  "author": "Justice Platform <platform@justice.gov>",
+  "license": "MIT"
+}

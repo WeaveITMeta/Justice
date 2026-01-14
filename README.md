@@ -293,8 +293,8 @@ MIT License with ethical use requirements - See [`LICENSE`](./LICENSE) for detai
 
 ### Communication Channels
 - **GitHub Discussions**: Ideas, questions, feedback
-- **Discord**: Real-time collaboration (coming soon)
-- **Mailing List**: Announcements and updates (coming soon)
+- **Discord**: Real-time collaboration [Metaverse Bill](https://discord.gg/gA3pspAAQV)
+- **Mailing List**: Announcements and updates (from McKaleOlson@gmail.com)
 - **Working Groups**: Focused collaboration on specific topics
 
 ### Code of Conduct

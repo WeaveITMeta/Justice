@@ -17,9 +17,9 @@ The Justice System is a community-driven open-source project. This document outl
 ```
 Community
     ↓
-Core Team (7-11 members)
+Core Team (Pull requests for members)
     ↓
-Working Groups (5 groups)
+Working Groups (Justice groups)
     ↓
 Contributors
 ```
